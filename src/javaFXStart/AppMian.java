@@ -1,32 +1,39 @@
 package javaFXStart;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Optional;
+import java.util.stream.Stream;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
+import jdk.internal.foreign.MappedMemorySegmentImpl;
 
 public class AppMian extends Application{
-	
-	public AppMian() {
-		System.out.println(Thread.currentThread().getName()+": AppMain() 호출");
-	}
-	
-	@Override
-	public void init() throws Exception{
-		System.out.println(Thread.currentThread().getName()+": init() 호출");
-	}
 	
 	@Override
 	public void start(Stage primaryStage) {
 		System.out.println(Thread.currentThread().getName()+": start() 호출");
 		primaryStage.show();
 	}
+	// 실행 매개값 얻어오기
+	/**@Override
+	public void init() {
+		Parameters params = getParameters();
+		List<String> list = params.getRaw();
+		Map<String, String> map = params.getNamed();
+		Stream<String> mapKey = map.keySet().stream();
+		Stream<String> mapValue = map.values().stream();
+		
+		// 스트림을 이용한 내부반복으로 출력하기
+		mapKey.forEach(k -> {
+			System.out.print(k+":");
+			System.out.println(map.get(k));				
+		});
+	}**/
 	
-	@Override
-	public void stop() {
-		System.out.println(Thread.currentThread().getName()+": stop() 호출");
-	}
-	
-	public static void main(String[] args) {
-		System.out.println(Thread.currentThread().getName()+": main() 호출");
+	public static void main(String[] args) {		
 		launch(args);
 	}
 }
