@@ -1,20 +1,40 @@
 package javaFXStart;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Optional;
-import java.util.stream.Stream;
-
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import jdk.internal.foreign.MappedMemorySegmentImpl;
 
 public class AppMian extends Application{
 	
 	@Override
 	public void start(Stage primaryStage) {
-		System.out.println(Thread.currentThread().getName()+": start() 호출");
+		VBox root = new VBox();
+		root.setPrefWidth(350);
+		root.setPrefHeight(150);
+		root.setAlignment(Pos.CENTER);
+		root.setSpacing(20);
+		
+		Label label = new Label();
+		label.setText("Hello, JavaFX");
+		label.setFont(new Font(50));
+		
+		Button btn = new Button();
+		btn.setText("확인");
+		btn.setOnAction(event->Platform.exit());
+		
+		root.getChildren().add(label);
+		root.getChildren().add(btn);
+		
+		Scene scene = new Scene(root);
+		
+		primaryStage.setTitle("AppMain");
+		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
 	// 실행 매개값 얻어오기
