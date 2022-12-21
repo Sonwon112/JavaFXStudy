@@ -18,6 +18,8 @@ public class AppMian extends Application{
 	
 	@Override
 	public void start(Stage primaryStage) {
+		
+		// 선언적 레이아웃 
 		Parent root = null;
 		try {
 			root = FXMLLoader.load(getClass().getResource("test.fxml"));
