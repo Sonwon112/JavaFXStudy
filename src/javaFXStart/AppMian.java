@@ -1,8 +1,12 @@
 package javaFXStart;
 
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -14,7 +18,21 @@ public class AppMian extends Application{
 	
 	@Override
 	public void start(Stage primaryStage) {
-		VBox root = new VBox();
+		Parent root = null;
+		try {
+			root = FXMLLoader.load(getClass().getResource("test.fxml"));
+			Scene scene = new Scene(root);
+			primaryStage.setTitle("AppMain");
+			primaryStage.setScene(scene);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		// 프로그램적 레이아웃
+		/**VBox root = new VBox();
 		root.setPrefWidth(350);
 		root.setPrefHeight(150);
 		root.setAlignment(Pos.CENTER);
@@ -34,7 +52,8 @@ public class AppMian extends Application{
 		Scene scene = new Scene(root);
 		
 		primaryStage.setTitle("AppMain");
-		primaryStage.setScene(scene);
+		primaryStage.setScene(scene);*/
+		
 		primaryStage.show();
 	}
 	// 실행 매개값 얻어오기
@@ -57,3 +76,4 @@ public class AppMian extends Application{
 		launch(args);
 	}
 }
+
