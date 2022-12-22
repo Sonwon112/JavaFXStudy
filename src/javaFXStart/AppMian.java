@@ -22,7 +22,8 @@ public class AppMian extends Application{
 		// 선언적 레이아웃 
 		Parent root = null;
 		try {
-			root = FXMLLoader.load(getClass().getResource("test.fxml"));
+//			root = FXMLLoader.load(getClass().getResource("test.fxml"));
+			root = FXMLLoader.load(getClass().getResource("anchorPaneSample.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setTitle("AppMain");
 			primaryStage.setScene(scene);
