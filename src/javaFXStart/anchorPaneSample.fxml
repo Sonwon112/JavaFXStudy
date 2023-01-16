@@ -8,12 +8,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-   	  <Label layoutX="42.0" layoutY="28.0" text="ì•„ì´ë””" />
-      <Label layoutX="42.0" layoutY="66.0" text="íŒ¨ìŠ¤ì›Œë“œ" />
+   	  <Label layoutX="42.0" layoutY="28.0" text="¾ÆÀÌµð" />
+      <Label layoutX="42.0" layoutY="66.0" text="ÆÐ½º¿öµå" />
       <TextField layoutX="120.0" layoutY="24.0" />
       <PasswordField layoutX="120.0" layoutY="62.0" />
-      <Button layoutX="97.0" layoutY="106.0" mnemonicParsing="false" text="ë¡œê·¸ì¸" />
-      <Button layoutX="164.0" layoutY="106.0" mnemonicParsing="false" text="ì·¨ì†Œ" />
+      <Button layoutX="97.0" layoutY="106.0" mnemonicParsing="false" text="·Î±×ÀÎ" />
+      <Button layoutX="164.0" layoutY="106.0" mnemonicParsing="false" text="Ãë¼Ò" />
       
    </children>
 </AnchorPane>

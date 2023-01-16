@@ -19,7 +19,7 @@ public class AppMian extends Application{
 	@Override
 	public void start(Stage primaryStage) {
 		
-		// ì„ ì–¸ì  ë ˆì´ì•„ì›ƒ 
+		// ¼±¾ðÀû ·¹ÀÌ¾Æ¿ô 
 		Parent root = null;
 		try {
 //			root = FXMLLoader.load(getClass().getResource("test.fxml"));
@@ -34,7 +34,7 @@ public class AppMian extends Application{
 		
 		
 		
-		// í”„ë¡œê·¸ëž¨ì  ë ˆì´ì•„ì›ƒ
+		// ÇÁ·Î±×·¥Àû ·¹ÀÌ¾Æ¿ô
 		/**VBox root = new VBox();
 		root.setPrefWidth(350);
 		root.setPrefHeight(150);
@@ -46,7 +46,7 @@ public class AppMian extends Application{
 		label.setFont(new Font(50));
 		
 		Button btn = new Button();
-		btn.setText("í™•ì¸");
+		btn.setText("È®ÀÎ");
 		btn.setOnAction(event->Platform.exit());
 		
 		root.getChildren().add(label);
@@ -59,7 +59,7 @@ public class AppMian extends Application{
 		
 		primaryStage.show();
 	}
-	// ì‹¤í–‰ ë§¤ê°œê°’ ì–»ì–´ì˜¤ê¸°
+	// ½ÇÇà ¸Å°³°ª ¾ò¾î¿À±â
 	/**@Override
 	public void init() {
 		Parameters params = getParameters();
@@ -68,7 +68,7 @@ public class AppMian extends Application{
 		Stream<String> mapKey = map.keySet().stream();
 		Stream<String> mapValue = map.values().stream();
 		
-		// ìŠ¤íŠ¸ë¦¼ì„ ì´ìš©í•œ ë‚´ë¶€ë°˜ë³µìœ¼ë¡œ ì¶œë ¥í•˜ê¸°
+		// ½ºÆ®¸²À» ÀÌ¿ëÇÑ ³»ºÎ¹Ýº¹À¸·Î Ãâ·ÂÇÏ±â
 		mapKey.forEach(k -> {
 			System.out.print(k+":");
 			System.out.println(map.get(k));				
